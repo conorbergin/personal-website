@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+
+nav a {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+}
+
+main a {
+    text-decoration: none;
+}
+
+
+
+h1 { font-size: 140%;}
+h2 { font-size: 110%;}
+h3 { font-size: 100%;}
+
+
+li {
+    min-width: 0px;
+}
+
+ul, ol {
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+
+img, video, canvas {
+    max-width: 100%;
+    display: block;
+}
+
+figure {
+    font-weight: bold;
+    font-size: smaller;
+    text-align: center;
+    margin: 0
+}
+
+
+footer {
+    padding-top: 200px;
+}
