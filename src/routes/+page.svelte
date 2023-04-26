@@ -2,3 +2,4 @@
 
 <p><a href="/strandbeest">Making a Flexible Strandbeest</a></p>
 <p><a href="/cad">On CAD</a></p>
+<p><a href="/aoc-rust">Advent of Code in Rust</a></p>
