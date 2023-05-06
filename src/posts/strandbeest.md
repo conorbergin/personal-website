@@ -3,7 +3,18 @@ title: "Making a Flexible Strandbeest"
 date: "22 Sep 2022"
 ---
 
-The <a href="https://www.strandbeest.com/">Strandbeests</a> are a family of kinetic sculptures developed by Theo Jansen. At their centre is a linkage which is responsible for their organic gait. The linkage is driven by a crank, and its end effector is a foot. It can be driven both forwards and backwards and at different speeds, analagous to a wheel. If several of them are arranged in parallelon a crankshaft you have a sort of walking trolley that can either be powered at the crank, pulled along, or made to descend an incline under its own weight.
+<script>
+
+  import VideoPlayer from '$lib/VideoPlayer.svelte'
+  let paused = true
+
+</script>
+
+<VideoPlayer src="/final.webm"/>
+
+_Adapted from a university project_
+
+The <a href="https://www.strandbeest.com/">Strandbeests</a> are a family of kinetic sculptures developed by Theo Jansen. At their centre is a linkage which is responsible for their organic gait. The linkage is driven by a crank, and its end effector is a foot. It can be driven both forwards and backwards and at different speeds, analagous to a wheel. If several of them are arranged in parallel on a crankshaft you have a sort of walking trolley that can either be powered at the crank, pulled along, or made to descend an incline under its own weight.
 
 I thought it would be possible to make the linkages out of a single piece of plastic, making use of flexures instead of joints. This comes with several advantages:
 
@@ -12,15 +23,14 @@ I thought it would be possible to make the linkages out of a single piece of pla
  - Flexures are less complex to model in CAD (though more complex to design)
 
 ## The difficulty of simulating large deflections
-Unfortuantely, flexures are significantly more mathematically complex than joints. I used Larry Howell’s <em>Compliant Mechanisms</em> almost exclusively, it is comprehensive and very readable.
+Unfortuantely, flexures are significantly more mathematically complex than joints. I used Larry Howell’s <em>Compliant Mechanisms</em> constantly and found it very helpful.
 
-I won’t bore you with the theory, if you are interested I’ve detailed myadventures in simulating compliant mechanisms with multiple flexures <a  href="theory">here</a> (spoiler: I didn’t get very far).
-
+The difficuly arises because flexures are designed to flex much further than typical engineering models allow for. Typical beam bending problems assume the deflection is very small compared to the length of the beam -- allowing us to use a linear elastic model. This is not a valid assumption with flexures, so we have to use a non-linear model. Non linear models are much harder to reason about, and much harder for computers to solve.
 
 Fortunately, you can make a pretty good approximation of a flexure with linear springs and links, called the Pseudo-Rigid-Body Model (PRBM). They are explained in Chapter 5 of <em>Compliant Mechanisms</em>. The most obvious PRBM is to model a small flexure as a hinge with a torsional spring that returns it to its original position.
 
-<figure>
-  <img src="/prbm-examples.webp" />
+<figure style="padding:0px 100px ">
+  <img  src="/prbm-examples.webp" />
   <figcaption>Fig. 1</figcaption>
 </figure>
 
@@ -45,28 +55,30 @@ I could then change the lengths of links as I watched the linkage cycle, observi
   <figcaption>Fig. 3</figcaption>
 </figure>
 
+<VideoPlayer src="/screencast.webm" />
+
 I attempted to run a FEM analyis using CalculiX in Freecad, applying different displacements to try and replicate the effect of the crank turning. The results aren’t good, I suspect because the internal solver is linear. Notice how the pivot hole expands and contracts oddly.
 
-<div style="display:grid; grid-template-columns: 1fr 1fr">
+<div style="position:relative; display:grid; grid-template-columns: 1fr 1fr" on:click={() =>{paused = paused ? false: true}}>
   <figure>
-    <canvas id="prbm" width="850" height="850" />
+    <video loop bind:paused>
+    <source src="prbm.webm">
+    </video>
     <figcaption>PRBM</figcaption>
   </figure>
   <figure>
-    <canvas id="fem" width="1095" height="1095" />
+    <video loop bind:paused>
+      <source src="fem.webm">
+    </video>
     <figcaption>FEM</figcaption>
   </figure>
+  <em style="position:absolute; bottom: 30px" >Click to {paused ? "play" : "pause"}</em>
 </div>
+
+
 
 ## The Printed Linkage
-I mirrored the linkage to make a part with two feet with one input and sent it off to a 3D printing service. I did have to reassure them that I wanted the flexures to be that thin, and that I would take the of risk them getting damaged in the post. Here is the final linkage in action:
+I mirrored the linkage to make a part with two feet with one input and sent it off to a 3D printing service. I did have to reassure them that I wanted the flexures to be that thin, and that I would take the of risk them getting damaged in the post. You can see the final thing in action at the top of the page.
 
-<div>
-  <figure>
-    <canvas id="final" width="1250" height="644" />
-    <figcaption>Final</figcaption>
-  </figure>
-</div>
-
-As you can see the parallel flexures buckle due to the torque on the foot from the link to the pivot. This is a limitation of using a PRBM, if I had found a better way of modelling the mechanism I might have been able to mitigate it. That being said it still works reasonably well. I never made a full Strandbeest using my mechanism, at this point I was completely sick of the project.
+As you can see the parallel flexures buckle due to the torque on the foot from the link to the pivot. This is a limitation of using a PRBM, if I had found a better way of modelling the mechanism I might have been able to mitigate it. That being said it still works reasonably well. I never made a full Strandbeest using my mechanism, at this point I was pretty sick of the project.
 

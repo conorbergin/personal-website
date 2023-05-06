@@ -1,14 +1,13 @@
 <script>
   import '../styles.scss'
+  import Nav from '../lib/Nav.svelte'
 </script>
 
-<nav>
-  <a href="/">[Home]</a>
-  <a href="/about">[About]</a>
-</nav>
-
+<Nav/>
+<!-- <hr/> -->
 <main>
   <slot />
 </main>
 
 <footer />
+
