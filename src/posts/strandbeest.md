@@ -10,7 +10,8 @@ date: "22 Sep 2022"
 
 </script>
 
-<VideoPlayer src="/final.webm"/>
+
+<VideoPlayer src="/final"/>
 
 _Adapted from a university project_
 
@@ -39,40 +40,35 @@ In Fig. 1 we see three simple flexures operating in tandem with their PRBM equiv
 ## Using FreeCAD to Design Linkages
 I tried several different rigid body solvers, but found them clumsy to use. You would have to define your model using code, or import it from some CAD package. I wanted something I could work on in realtime. I started using FreeCAD to sketch out ideas, using the contraint solver in the Sketcher workbench as a poor man’s rigid body solver. I found that FreeCAD worked fine for my use case (I wasn’t worryed about kinematics or dynamics at this point, I was looking for a mapping between crank angles and end effector position). FreeCAD has a python interface, so I wrote a script that would periodically change the angle of the input link.
 
-<figure class="centre">
-  <video controls>
-    <source src="/screencast.webm" type="video/webm" />
-    <source src="/screencast.mp4" type="video/mp4" />
-    Video not supported
-  </video>
+<figure>
+  <video controls style="object-fit:cover; object-position: bottom center ;height:645px;width:100%">
+  <source src="/screencast.webm">
+  <video>
+
   <figcaption>Fig. 2</figcaption>
 </figure>
 
 I could then change the lengths of links as I watched the linkage cycle, observing how the characteristics of the path of the foot changed. Once I had something that more or less worked I wrote a second script that recorded the path of the foot as a set of coordinates, then changed the geometry of the foot, and repeated. When it had finished running I had a set of a hundred different paths, and I just had to select the best one. Now that I had my finished PRBM, I set about turning it into the compliant linkage it was supposed to be representing. I replaced all the joints with flexures and filled the spaces between with rigid bodies.
 
-<figure class="centre">
-  <img src="/my-prbm.webp" />
+<figure>
+  <img src="/my-prbm.webp"/>
   <figcaption>Fig. 3</figcaption>
 </figure>
 
-<VideoPlayer src="/screencast.webm" />
 
 I attempted to run a FEM analyis using CalculiX in Freecad, applying different displacements to try and replicate the effect of the crank turning. The results aren’t good, I suspect because the internal solver is linear. Notice how the pivot hole expands and contracts oddly.
 
-<div style="position:relative; display:grid; grid-template-columns: 1fr 1fr" on:click={() =>{paused = paused ? false: true}}>
-  <figure>
-    <video loop bind:paused>
+<div style="position:relative; display:grid; grid-template-columns: 1fr 1fr" on:click={() => paused = !paused}>
+  <video loop bind:paused>
     <source src="prbm.webm">
-    </video>
-    <figcaption>PRBM</figcaption>
-  </figure>
-  <figure>
-    <video loop bind:paused>
-      <source src="fem.webm">
-    </video>
-    <figcaption>FEM</figcaption>
-  </figure>
-  <em style="position:absolute; bottom: 30px" >Click to {paused ? "play" : "pause"}</em>
+    <source src="prbm.mp4">
+  </video>
+  <video loop bind:paused>
+    <source src="fem.webm">
+    <source src="fem.mp4">
+  </video>
+
+  <em style="position:absolute; bottom: 10px; left: 5px" >Click to {paused ? "play" : "pause"}</em>
 </div>
 
 

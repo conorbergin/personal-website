@@ -53,6 +53,9 @@ This was the last model I did, so I had the advatage of knowing the dimesions of
 
 This is a CSG that uses a DSL to define its models. The language itself is quite nice to use, but the kernel is severly limited. The idiomatic way to make models with OpenSCAD is boolean operations with primitve shapes. You can’t just attach shapes to other shapes, you have to work out their offsets and apply transformations manually. Because the models are declarative, and can be split into modules and functions, they end up being quite robust, and easy to troubleshoot. Filleting is completely out of the question, you can make a rectangle with rounded edges and extrude it, and you can do some clever things with the intersection operation, but you can’t finish a model and just add fillets to it.
 
+<img src="/openscad.png" alt="openscad" />
+
+
 ### CADQuery
 
 CADQuery is another script based CAD, but this time leveraging OpenCascade, the same kernel FreeCAD uses, and using Python rather than its own domain specific language. It is less mature than OpenSCAD, its primary competitor, and is a bit of a pain to install. If you want the latest version with the sketch subsytem, you need to build it yourself. The sketch subsystem crashed on me, so it might be best to wait for an official release before you use it. The releases are distributed as a zip archive or a miniforge package. I don’t want anything to do with conda so I used the zip archive. It does have some advantages over OpenSCAD, it uses a B-Rep kernel, and it uses python. So while it is less mature, it should be much less limited.

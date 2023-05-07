@@ -1,4 +1,7 @@
 <p>
-  Hello, welcome to my website. If you want to contact me you can do so at myname@protonmail.com.
+  Hello, welcome to my website.
+</p>
+<p>
+  If you want to contact me you can do so using <em>conorbergin at protonmail dot com</em>
 
 </p>

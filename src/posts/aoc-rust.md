@@ -7,7 +7,7 @@ This is the third year I have attempted AoC, and the first time I have finished 
 
 Rust is great, as long as you don't write too much of it. I didn't have many problems with the borrow checker becuase I didn't allocate much. The inconvinience of moving data structurea around forced me to think about what I was actually trying to do with my code.
 
-I used itertools a lot, the iproduct! macro in particular to avoid writing nested for loops.
+I used ```itertools``` a lot, the `iproduct!` macro in particular to avoid writing nested for loops.
 
 ### Day 22 part 2
 

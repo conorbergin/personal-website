@@ -1,10 +1,15 @@
 <script>
   import '../styles.scss'
-  import Nav from '../lib/Nav.svelte'
+  import Goblin from '$lib/Goblin.svelte';
 </script>
 
-<Nav/>
-<!-- <hr/> -->
+<nav>
+  <a href="/">[Home]</a>
+  <a href="/about">[About]</a>
+</nav>
+
+<Goblin/>
+
 <main>
   <slot />
 </main>
