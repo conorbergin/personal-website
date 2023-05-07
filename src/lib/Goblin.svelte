@@ -1,30 +1,19 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte'
-  let y = 0
+    import { fix_position } from 'svelte/internal'
 
-  let posX = 0
-  let posY = 0
+  let location = { x: 0, y: 0 }
+  let pupil = {x :{left: 0, right: 0}, y:0}
 
-  let b_pos = 4
-  let cel = 0
-  let cer = 0
+  let eyelid = 0
 
-  let f_pos = 0
 
-  let moving = false
-  let move_timer = null
 
-  const frame = (pos) => {
-    if (pos > 2) {
-      return 5 - pos
-    } else {
-      return pos
-    }
-  }
+  const selectEyelidFrame = (pos) => 50 * (pos > 2 ? 5 - pos : pos)
+
 
   const blink = () => {
     if (f_pos != 0) return
-    if (moving) return
     let i = setInterval(() => {
       if (f_pos < 5) {
         f_pos++
@@ -35,31 +24,41 @@
     }, 100)
   }
 
-  let element
 
-  const clamp = (num, min, max) => {
-    return num <= min ? min : num >= max ? max : num
+  const clamp = (num : number, min: number, max : number) => num <= min ? min : num >= max ? max : num
+
+  const selectEyeFrame = (x: number) => (x + 4) * 49 + 10
+
+  const handleMousemove = (e: MouseEvent) => {
+    let dx = clamp(e.clientX - location.x - 190, -200, 200)
+    let dy = clamp(e.clientY - location.y - 40, -200, +200)
+
+    pupil.y = Math.round(dy / 100) * 6
+
+    if (dy <= 50 && dy >= -50 && dx <= 70 && dx >= -70) {
+      if (dx <= 70 && dx >= 20) {
+        pupil.x.left = 1
+        pupil.x.right = 0
+      } else if (dx <= -20 && dx >= -70) {
+        pupil.x.left = 0
+        pupil.x.right = -1
+      } else {
+        pupil.x.left = 1
+        pupil.x.right = -1
+      }
+    } else {
+      pupil.x.left = pupil.x.right = Math.round(dx / 50)
+    }
   }
 
-  const handleMousemove = (e) => {
-    moving = true
-    move_timer = setTimeout(() => {
-      moving = false
-    }, 5000)
-    let dx = e.clientX - posX - 190
-    let dy = e.clientY - posY - 40
-
-    y = Math.round(clamp(dy, -50, 50) / 50) * 6
-
-    cel = dx <= 74 && dx >= -20 && dy <= 30 && dy >= -50 ? 1 : 0
-    cer = dx <= 20 && dx >= -75 && dy <= 30 && dy >= -50 ? 1 : 0
-    b_pos = Math.round(clamp(dx, -200, 200) / 50 + 4)
-  }
-
+  // get centre of element
+  let element : HTMLElement
   const handleResize = () => {
     let rect = element.getBoundingClientRect()
-    posX = rect.left
-    posY = rect.top
+    location = {
+      x: rect.left,
+      y: rect.top,
+    }
   }
 
   onMount(() => {
@@ -69,28 +68,25 @@
   })
 </script>
 
-<div id="wrapper">
-  <!-- <img src="/nav/screentone_1.png" height="100" /> -->
+<div id="goblin">
   <img
     style="right:0px; margin-right: -10px;"
-    src="/nav/border.png"
+    src="/goblin/border.png"
     height="100"
   />
 
   <div bind:this={element}>
     <div
-      style="background-position-x:-{(b_pos + cel) * 49 +
-        10}px; transform:translate({0}px,{y}px)"
+      style="background-position:-{selectEyeFrame(pupil.x.left)}px {pupil.y}px;"
       id="a"
     />
     <div
-      style="background-position-x:-{(b_pos - cer) * 49 +
-        10}px; transform:translate({0}px,{y}px)"
+      style="background-position:-{selectEyeFrame(pupil.x.right)}px {pupil.y}px"
       id="b"
     />
 
-    <div id="c" style="background-position-x:-{frame(f_pos) * 50}px" />
-    <div id="d" style="background-position-x:-{frame(f_pos) * 50}px" />
+    <div id="c" style="background-position-x:-{selectEyelidFrame(eyelid)}px" />
+    <div id="d" style="background-position-x:-{selectEyelidFrame(eyelid)}px" />
   </div>
 </div>
 
@@ -103,22 +99,21 @@
 
   #a,
   #b {
-    height: 100px;
-    width: 40px;
+    height: 30px;
+    width:40px;
+    top: 30px;
     position: absolute;
-    background-image: url('/nav/eyes.png');
-    background-size: auto 50px;
+    background-image: url('/goblin/eyes.png');
+    background-size: auto 30px;
     background-repeat: no-repeat;
   }
 
   #a {
-    left: 145px;
-    top: 21px;
+    left: 147px;
   }
 
   #b {
     left: 193px;
-    top: 21px;
   }
 
   #c,
@@ -126,7 +121,7 @@
     height: 100px;
     width: 50px;
     position: absolute;
-    background-image: url('/nav/eyelid.png');
+    background-image: url('/goblin/eyelid.png');
     background-size: auto 50px;
     background-repeat: no-repeat;
   }
@@ -147,7 +142,7 @@
     /* margin: 0px -10px */
   }
 
-  #wrapper {
+  #goblin {
     user-select: none;
 
     position: relative;
@@ -155,7 +150,7 @@
 
     height: 100px;
     margin-bottom: -20px;
-    background: url('/nav/screentone_1.png') no-repeat;
+    background: url('/goblin/screentone_1.png') no-repeat;
     background-size: auto 100px;
     margin-right: 10px;
   }
