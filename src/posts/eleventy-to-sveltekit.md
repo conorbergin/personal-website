@@ -12,13 +12,17 @@ Slightly overwhelmed by all the paths I could take, I settled on static site gen
 
 I was satisfied with Eleventy for some time, it had a few very useful features, such as being able to generate a date from the last edit of that file in the git repo. I could host it on Netlify and have it linked to my Github so that it rebuilt everytime I pushed an update.
 
-## A digression on GUI develtoolkits
+## A digression on GUI toolkits
 
-Designing a GUI is difficult, and choosing which technology to use in the first place is a good part of why.
+Designing a GUI is difficult, and choosing which technology to use in the first place is a good part of why. The choice seems between a web app and a 'native' app, but the latter term has never been well defined, and the former is becoming almost as murky.
 
-I think you can categorize frameworks by the approach to cross platform consistency. In one category you have frameworks that handle their own drawing, like flutter, game engines and immediate mode guis, these gaurantee consitent user experience, but if you want platform specific feaures you have to implement them on top of their engine. In the middle you have gui libraries like qt and webapps, these might use native text rendering, and will use different widgets.
+At the lowest level we have drawing apis and libraries. Apple has core graphics, windows has direct2d. Browsers have HTML + CSS, SVG and Canvas. On Linux you typically use Cairo, Flutter uses Skia. And then there is nothing stopping you using a 3d api, Metal, DirectX, Vulkan, OpenGL, WebGL and WebGPU.
 
-I believe the future is flutter et al. I am particulary interested in where the Rust GUI ecosystem goes.
+They you have the toolkits, some are built on top of one portable api, like Flutter on Skia, some tarrget multiple, like Qt, some make no attempt, like windowsa and mac toolkits. 
+
+I believe the future is flutter et al. I don't see the point in not making a cross platform app, and I think trying to target multiple lo level apis is an inefficent way to going about things.
+
+Until then you should be making web apps. For all their shortcomings, there isn't another platform that comes close to the level of crossplatform support, 3rd party libraries.
 
 
 ## SvelteKit

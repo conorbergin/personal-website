@@ -1,6 +1,10 @@
 <script>
+  import { dev } from '$app/environment'
+  import { inject } from '@vercel/analytics'
+
+  inject({ mode: dev ? 'development' : 'production' })
   import '../styles.scss'
-  import Goblin from '$lib/Goblin.svelte';
+  import Goblin from '$lib/Goblin.svelte'
 </script>
 
 <nav>
@@ -8,11 +12,10 @@
   <a href="/about">[About]</a>
 </nav>
 
-<Goblin/>
+<Goblin />
 
 <main>
   <slot />
 </main>
 
 <footer />
-
