@@ -5,6 +5,8 @@
   inject({ mode: dev ? 'development' : 'production' })
   import '../styles.scss'
   import Goblin from '$lib/Goblin.svelte'
+
+  export const prerender = true
 </script>
 
 <nav>
