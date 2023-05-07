@@ -1,5 +1,7 @@
 <!-- <h1>Conor Bergin's Blog</h1> -->
-
+<!-- <head> -->
+    <title>Conor Bergin's Website</title>
+<!-- </head> -->
 
 <h1>Posts</h1>
 <p><a href="/eleventy-to-sveltekit">From Eleventy to SvelteKit</a></p>
