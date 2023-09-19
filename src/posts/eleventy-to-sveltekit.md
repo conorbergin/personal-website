@@ -1,6 +1,6 @@
 ---
 title: "From Eleventy to SvelteKit"
-date: "26 Apr 2023"
+date: "19 Sep 2023"
 ---
 
 
