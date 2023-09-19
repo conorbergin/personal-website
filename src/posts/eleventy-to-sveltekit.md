@@ -14,24 +14,18 @@ I was satisfied with Eleventy for some time, it had a few very useful features, 
 
 ## A digression on GUI toolkits
 
-Designing a GUI is difficult, and choosing which technology to use in the first place is a good part of why. The choice seems between a web app and a 'native' app, but the latter term has never been well defined, and the former is becoming almost as murky.
+Building a good GUI is difficult, and choosing from the the range of technologies available to you -- and considering the range of opinions you will see on each in various online communities -- does not make it any easier. The initial choice seems to be between a web app and a 'native' app, but the boudaries between the two are blurred.
 
-At the lowest level we have drawing apis and libraries. Apple has core graphics, windows has direct2d. Browsers have HTML + CSS, SVG and Canvas. On Linux you typically use Cairo, Flutter uses Skia. And then there is nothing stopping you using a 3d api, Metal, DirectX, Vulkan, OpenGL, WebGL and WebGPU.
+At the lowest level we have drawing apis and libraries. Apple has Core Graphics, Windows has Direct2d. Browsers have HTML + CSS, SVG and Canvas. On Linux you typically use Cairo, Flutter uses Skia. And then there is nothing stopping you using a 3d api, Metal, DirectX, Vulkan, OpenGL, WebGL and WebGPU. The level of abstraction ranges from drawing triangles to text rendering.
 
-They you have the toolkits, some are built on top of one portable api, like Flutter on Skia, some tarrget multiple, like Qt, some make no attempt, like windowsa and mac toolkits. 
+Unless you want to make every text input, check-box and button from scratch you will need a Toolkit. If you want the best consistency with the target platform you can use whatever native toolkit it provides, but you will need to port your entire GUI layer for every new platform. Realistically, you will choose a cross-platform toolkit.
 
-I believe the future is flutter et al. I don't see the point in not making a cross platform app, and I think trying to target multiple lo level apis is an inefficent way to going about things.
+My current opinion is that if you are resource constrained and have no niche requirements you should be building a web app. You have mostly consistent rendering and layout, some 'native' widgets in the form of html input elements, and pretty good performance despite what you might read online. You can then bundle this app using Electron or Tauri and whatever is available for mobile platforms (cordova?), or just leave it as a website, most users won't care. There is also the PWA spec, which allows users to install your website as an app (a webview with no browser controls).
 
-Until then you should be making web apps. For all their shortcomings, there isn't another platform that comes close to the level of crossplatform support, 3rd party libraries.
+Choosing a webapp also opens up a world of excellent third party libraries, many more than you would find for any other platform. Modern reactive rendering libraries like React, Svelte or Solid make writing highly dynamic applications very easy. 
 
 
 ## SvelteKit
 
-After using Svelte for a month or so I realised there was nothing stopping me from using it for my website as well. It would be no heavier, because of its compile step, and it would offer me a lot more flexibility. Actually the main reason I started using it was so the page wouldn't reload when you were navigating the website, which I found to be exceedingly nice.
-
-I had to do a few things to get my SvelteKit project to feature parity with my Eleventy setup. I needed a markdown preprocessor, for starters, even though I end up using a lot of HTML in my markdown documents, having to write 'p' tags everywhere really gets in the way of my writing. I found <a href="https://mdsvex.pngwn.io/">mdsvex</a> from <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog">this blogpost</a>.
-
-## Conclusion
-
-You should probably use Wordpress
+After using Svelte for a month or so I realised there was nothing stopping me from using it for my website as well. It would be no heavier, because of its compile step, and it would offer me a lot more flexibility. Actually the main reason I started using it was so the page wouldn't completely redraw when you were navigating the website. Once I installed a markdown preprocessor (mdsvex) I couldn't see any advantage in going back to Eleventy.
 
