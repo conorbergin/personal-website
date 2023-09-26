@@ -11,7 +11,12 @@ date: "22 Sep 2022"
 </script>
 
 
-<VideoPlayer src="/final"/>
+<figure>
+  <video loop controls>
+    <source src="final.webm">
+    <source src="final.mp4">
+  </video>
+</figure>
 
 _Adapted from a <a data-sveltekit-reload href="/poster.pdf">university project</a>_
 
@@ -41,7 +46,7 @@ In Fig. 1 we see three simple flexures operating in tandem with their PRBM equiv
 I tried several different rigid body solvers, but found them clumsy to use. You would have to define your model using code, or import it from some CAD package. I wanted something I could work on in realtime. I started using FreeCAD to sketch out ideas, using the contraint solver in the Sketcher workbench as a poor man’s rigid body solver. I found that FreeCAD worked fine for my use case (I wasn’t worryed about kinematics or dynamics at this point, I was looking for a mapping between crank angles and end effector position). FreeCAD has a python interface, so I wrote a script that would periodically change the angle of the input link.
 
 <figure>
-  <video controls style="object-fit:cover; object-position: bottom center ;height:645px;width:100%">
+  <video controls style="object-fit:contain; object-position: bottom center ;width:100%">
   <source src="/screencast.webm">
   <video>
 

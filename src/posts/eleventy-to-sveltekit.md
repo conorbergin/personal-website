@@ -14,7 +14,7 @@ I was satisfied with Eleventy for some time, it had a few very useful features, 
 
 ## A digression on GUI toolkits
 
-Building a good GUI is difficult, and choosing from the the range of technologies available to you -- and considering the range of opinions you will see on each in various online communities -- does not make it any easier. The initial choice seems to be between a web app and a 'native' app, but the boudaries between the two are blurred.
+Building a good GUI is difficult, and choosing from the the range of technologies available to you -- and considering the range of opinions you will see on each in various online communities -- does not make it any easier. The initial choice seems to be between a web app and a 'native' app, but the boundaries between the two are blurred.
 
 At the lowest level we have drawing apis and libraries. Apple has Core Graphics, Windows has Direct2d. Browsers have HTML + CSS, SVG and Canvas. On Linux you typically use Cairo, Flutter uses Skia. And then there is nothing stopping you using a 3d api, Metal, DirectX, Vulkan, OpenGL, WebGL and WebGPU. The level of abstraction ranges from drawing triangles to text rendering.
 

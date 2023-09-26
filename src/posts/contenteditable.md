@@ -2,7 +2,9 @@
 title: "Building a contenteditable Text Editor from Scratch"
 date: "19 Sep 2023"
 ---
-Around March this year I decided I was going to build a note-taking app, having never been quite satisfied with waht was on offer. 6 months later and I am still not sure what a note taking app really is, but I do know a lot more about `contenteditable`.
+Around March this year I decided I was going to build a note-taking app, having never been quite satisfied with what was on offer. I wanted something secure, convenient and open. In order to be convenient a notes app must have first class sync support and designed with smartphones in mind. In order to be secure you must be either running your own servers or the data must be encrypted client-side.
+
+There are some 
 
 ## Prosemirror
 If ask online how to create a rich text editor you will be directed to Prosemirror, or its offspring, Tiptap. These work great out of the box, and collaboration is very easy to set up with YJS. However, customizing Prosemirror is hard, so hard that I started writing my own contenteditable editor from scratch. I particular I wanted:
