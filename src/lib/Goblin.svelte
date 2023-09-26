@@ -118,7 +118,7 @@
 
   #c,
   #d {
-    height: 100px;
+    height: 50px;
     width: 50px;
     position: absolute;
     background-image: url('/goblin/eyelid.png');
