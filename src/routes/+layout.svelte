@@ -4,7 +4,6 @@
 
   inject({ mode: dev ? 'development' : 'production' })
   import '../styles.scss'
-  import Goblin from '$lib/Goblin.svelte'
 
 </script>
 
@@ -12,8 +11,6 @@
   <a href="/">[Home]</a>
   <a href="/about">[About]</a>
 </nav>
-
-<Goblin />
 
 <main>
   <slot />
