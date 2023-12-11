@@ -1,13 +1,6 @@
-$light: #999999;
-$lighter: #eeeeee;
-$lightest: #e0dfdb;
-
-$dark: #222222;
-$darker: #0d0d0d;
-$darkest: #000000;
-
-$scroll: #a0a0a0;
-
+:root {
+    color-scheme: light dark;
+}
 
 body {
     margin: 0 auto;
@@ -15,17 +8,15 @@ body {
     min-width: 320px;
     // font-family: 'Roboto Slab', serif;
     // font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: $darker;
-    background-color: $lightest;
+
 }
 
 nav {
-    margin: 8px 8px 0px 8px;
+    margin: 2rem 8px 0px 8px;
+    font-weight: bold;
     a {
-        color: $dark;
         display: inline-block;
-        padding-right: 10px;
-        text-decoration: none;
+        text-decoration: underline;
     }
 
     a:hover {

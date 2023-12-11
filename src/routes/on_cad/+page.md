@@ -1,7 +1,7 @@
----
-title: "On CAD (revised)"
-date: "20 Dec 2022"
----
+<title>On CAD (revised)</title>
+
+
+_20 Dec 2022_
 
 With cheap 3D printers and PCB manufacturing services you could conceivably design something and have a physical prototype on your desk in the same week. It is quite common to see hardware projects on github that contain firmware source code, STLs for 3D printed parts, and Gerber files for PCBs. To assemble them you need to be able to solder, use a hot-glue gun, and operate a screwdriver.
 

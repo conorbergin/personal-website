@@ -1,7 +1,6 @@
----
-title: "Compliant Keyboard Switches Pt 1"
-date: "25 Sep"
----
+<title>Compliant Keyboard Switches Pt 1</title>
+
+_25 Sep_
 
 I am generally interested in input devices for computers. Earlier this year I made (assembled) an ortholinear 36 key split keyboard -- a relatively common setup. Building these keyboards is expensive, especially when you have to source all the parts individually. In my case, the minimum viable keyboard required two controllers (RP2040s), two mainboards, 36 switches, keycaps and hotswap sockets ( you can emit the hotswap sockets if you a sure about the keyswitches), which all totaled to about £120.
 
@@ -21,7 +20,7 @@ A good keyboard makes typing more enjoyable, what makes a keyboard good is up fo
 I replaced the pivots in a parallel mechanism with simple flexures. The key press is quite spongey because the flexure is too thick relative to the bars and feels quite plastic (we want elastic).
 <figure>
     <video controls loop>
-        <source src="/switches/IMG_1847.MP4">
+        <source src="/keyswitches/IMG_1847.MP4">
     </video>
     <figcaption>Mk.1 </figcaption>
 
@@ -35,7 +34,7 @@ I increased the thickness of the bars and used a different hinge design. This fl
 
 <figure>
     <video controls loop>
-        <source src="/switches/IMG_1849.MP4">
+        <source src="/keyswitches/IMG_1849.MP4">
     </video>
     <figcaption>Mk.2 </figcaption>
 </figure>
