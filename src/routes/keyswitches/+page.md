@@ -2,22 +2,22 @@
 
 _25 Sep_
 
-I am generally interested in input devices for computers. Earlier this year I made (assembled) an ortholinear 36 key split keyboard -- a relatively common setup. Building these keyboards is expensive, especially when you have to source all the parts individually. In my case, the minimum viable keyboard required two controllers (RP2040s), two mainboards, 36 switches, keycaps and hotswap sockets ( you can emit the hotswap sockets if you a sure about the keyswitches), which all totaled to about £120.
+I am generally interested in input devices for computers. Earlier this year I made (assembled) an ortholinear 36 key split keyboard, a relatively common setup. Building it was expensive, it required two controllers (RP2040s), two mainboards, 36 switches, keycaps and hotswap sockets (you could omit the hotswap sockets if you know you won't want to try different switches), which all came to about £120.
 
-I had some experience designing compliant mechanisms from uni, so I wondered if I could significantly rediuce the part count with a 3d printed keyswitch / keycap combo.
+I had some experience designing compliant mechanisms from my degree, so I wondered if I could significantly reduce the part count with a 3d printed keyswitch / keycap combo.
 
 ## Rationale
 Because 3d printing gives you 'complexity for free', you can make a very complex mechanism which is just as quick and easy to print as a simple one. If you could design an effective keyswitch, you could parametrize the model to make it work in a range of sizes and shapes. You could print them in place as apart of a larger structure -- maybe a full sized keyboard or a game controller.
 
 ## Requirements
 A good keyboard makes typing more enjoyable, what makes a keyboard good is up for debate, but I think there are some basic things everyone can agree on:
-1. The key must have a constrained linear up and down motion with an elastic return
+1. The key must only move down, no pitching or sliding
 2. The key must be easy to actuate from its corners as well as its centre, and must not bend (think cheap buttons that pitch when you press them from the edges)
 3. The key should not wobble
 
 ## Mk 1
 
-I replaced the pivots in a parallel mechanism with simple flexures. The key press is quite spongey because the flexure is too thick relative to the bars and feels quite plastic (we want elastic).
+I replaced the pivots in a parallel mechanism with simple flexures. The flexures are too thick and feels quite plasticky (we want elasticky).
 <figure>
     <video controls loop>
         <source src="/keyswitches/IMG_1847.MP4">
