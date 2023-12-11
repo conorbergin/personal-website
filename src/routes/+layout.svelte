@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-
   import "../styles.scss";
+  import "../prisma.css"
 
   const split = (s: String) => {
     const names = s.split("/").slice(1, -1);
@@ -24,7 +24,6 @@
     {$page.url.pathname.split("/").at(-1)}
   {/if}
 </nav>
-
 <main>
   <slot />
 </main>
