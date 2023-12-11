@@ -6,7 +6,6 @@
 
   const split = (s: String) => {
     const names = s.split("/").slice(1, -1);
-    console.log(names);
 
     return names.map((n, index) => ({
       name: n,
