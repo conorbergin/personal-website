@@ -16,7 +16,7 @@
 </figure>
 
 
-_22 Sep 2022 -- Adapted from a <a data-sveltekit-reload href="/poster.pdf">university project</a>_
+_22 Sep 2022 -- Adapted from a <a data-sveltekit-reload href="/strandbeest/poster.pdf">university project</a>_
 
 The <a href="https://www.strandbeest.com/">Strandbeests</a> are a family of kinetic sculptures developed by Theo Jansen. At their centre is a linkage which is responsible for their organic gait. The linkage is driven by a crank, and its end effector is a foot. It can be driven both forwards and backwards and at different speeds, analagous to a wheel. If several of them are arranged in parallel on a crankshaft you have a sort of walking trolley that can either be powered at the crank, pulled along, or made to descend an incline under its own weight.
 
