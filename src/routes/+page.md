@@ -2,7 +2,7 @@
 <title>Conor Bergin's Website</title>
 
 
-[Compliant Keyboard Switches Pt 1](/keyswitches_1)
+[Compliant Keyboard Switches Pt 1](/keyswitches)
 
 [Building a contenteditable Text Editor from Scratch](/contenteditable)
 

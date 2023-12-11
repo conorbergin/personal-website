@@ -29,7 +29,7 @@ In phase two of the challenge, you have to make the same model with a few altere
 
 Quite painless, OnShape has much in common with Solidworks, which is what I’m used to. I had a bit of a hiccup with the fillets at the end, they need to be applied in a certain order or the model will break
 
-<img src="/onshape.png" alt="onshape" />
+<img src="/on_cad/onshape.png" alt="onshape" />
 
 ### FreeCAD
 
@@ -37,7 +37,7 @@ Quite painless, OnShape has much in common with Solidworks, which is what I’m 
 
 FreeCAD has pretty much all the features OnShape has, more even, but it is much less polished. I found myself making many more mouse clicks, I would have been much faster if I learned a few more keyboard shortcuts, and the UI is difficult to navigate. I wasted some time trying to get the link edges feature to work in sketcher, I ended up redrawing some of the sketches. FreeCAD, unlike Solidowrks and OnShape, will only allow you to extrude a sketch that is also a closed loop, so any extending lines will cause problems. FreeCAD can actually do fillets, but this model has some complex intersections that it just can’t handle.
 
-<img src="/freecad.png" alt="freecad" />
+<img src="/on_cad/freecad.png" alt="freecad" />
 
 ### Solvespace
 
@@ -45,7 +45,7 @@ FreeCAD has pretty much all the features OnShape has, more even, but it is much 
 
 This was the last model I did, so I had the advatage of knowing the dimesions off the top of my head, but it is also by far the smallest and least featured of the three. Solvespace has a very easy UI once you understand it, there is practically nothing there. I wasted some time because I started modelling the part in half, expecting to be able to mirror it when I got to the end. There is no such feature in Solvespace. I was fine after I converted all my extrudes to symmetric and redrew a couple of sketches. There is no hole tool so I had to manually make my counterbore bolt holes with two sketches. There is no scroll to zoom, which is a bit odd. You can’t just select a face to start a new sketch, instead you select two lines and a point. That being said, solvespace is so much less clunky than FreeCAD, arguabley OnShape too.
 
-<img src="/solvespace.png" alt="solvespace" />
+<img src="/on_cad/solvespace.png" alt="solvespace" />
 
 ### OpenSCAD
 
@@ -53,7 +53,7 @@ This was the last model I did, so I had the advatage of knowing the dimesions of
 
 This is a CSG that uses a DSL to define its models. The language itself is quite nice to use, but the kernel is severly limited. The idiomatic way to make models with OpenSCAD is boolean operations with primitve shapes. You can’t just attach shapes to other shapes, you have to work out their offsets and apply transformations manually. Because the models are declarative, and can be split into modules and functions, they end up being quite robust, and easy to troubleshoot. Filleting is completely out of the question, you can make a rectangle with rounded edges and extrude it, and you can do some clever things with the intersection operation, but you can’t finish a model and just add fillets to it.
 
-<img src="/openscad.png" alt="openscad" />
+<img src="/on_cad/openscad.png" alt="openscad" />
 
 
 ### CADQuery

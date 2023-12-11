@@ -1,6 +1,4 @@
-<script>
-    import cube from './Cube_net_pic.png'
-</script>
+
 
 <title>Advent of Code 2022 in Rust</title>
 
@@ -15,10 +13,6 @@ I used ```itertools``` a lot, the `iproduct!` macro in particular to avoid writi
 ### Day 22 part 2
 
 This was perhaps the hardest problem of the year. Given a map, which was also the net of a cube, follow a route, and at every edge, wrap to the matching edge if the net were folded. One solution which was common on reddit was to hardcode the transitions of your net, but there was mutiple possible nets, my test input and puzzle input were different. I couldn't find much information about cube nets, and what I did find was in the format of worksheets for young children being introduced to maths. Which is odd, because it is an interesting problem.
-
-<figure>
-<img src={cube}>
-</figure>
 
 There are eleven unique cube nets, ten are 3x4 and one is 2x5. I would be possible to check if your input was one of these valid nets and then hardcode the transitions for each one. This would be robust and very verbose.
 

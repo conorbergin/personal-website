@@ -10,8 +10,8 @@
 
 <figure>
   <video loop controls>
-    <source src="final.webm">
-    <source src="final.mp4">
+    <source src="/strandbeest/final.webm">
+    <source src="/strandbeest/final.mp4">
   </video>
 </figure>
 
@@ -34,7 +34,7 @@ The difficuly arises because flexures are designed to flex much further than typ
 Fortunately, you can make a pretty good approximation of a flexure with linear springs and links, called the Pseudo-Rigid-Body Model (PRBM). They are explained in Chapter 5 of <em>Compliant Mechanisms</em>. The most obvious PRBM is to model a small flexure as a hinge with a torsional spring that returns it to its original position.
 
 <figure style="padding:0px 100px ">
-  <img  src="/prbm-examples.webp" />
+  <img  src="/strandbeest/prbm-examples.webp" />
   <figcaption>Fig. 1</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ I tried several different rigid body solvers, but found them clumsy to use. You 
 
 <figure>
   <video controls style="object-fit:contain; object-position: bottom center ;width:100%">
-  <source src="/screencast.webm">
+  <source src="/strandbeest/screencast.webm">
   <video>
 
   <figcaption>Fig. 2</figcaption>
@@ -54,7 +54,7 @@ I tried several different rigid body solvers, but found them clumsy to use. You 
 I could then change the lengths of links as I watched the linkage cycle, observing how the characteristics of the path of the foot changed. Once I had something that more or less worked I wrote a second script that recorded the path of the foot as a set of coordinates, then changed the geometry of the foot, and repeated. When it had finished running I had a set of a hundred different paths, and I just had to select the best one. Now that I had my finished PRBM, I set about turning it into the compliant linkage it was supposed to be representing. I replaced all the joints with flexures and filled the spaces between with rigid bodies.
 
 <figure>
-  <img src="/my-prbm.webp"/>
+  <img src="/strandbeest/my-prbm.webp"/>
   <figcaption>Fig. 3</figcaption>
 </figure>
 
@@ -63,12 +63,12 @@ I attempted to run a FEM analyis using CalculiX in Freecad, applying different d
 
 <div style="position:relative; display:grid; grid-template-columns: 1fr 1fr" on:click={() => paused = !paused}>
   <video loop bind:paused>
-    <source src="prbm.webm">
-    <source src="prbm.mp4">
+    <source src="/strandbeest/prbm.webm">
+    <source src="/strandbeest/prbm.mp4">
   </video>
   <video loop bind:paused>
-    <source src="fem.webm">
-    <source src="fem.mp4">
+    <source src="/strandbeest/fem.webm">
+    <source src="/strandbeest/fem.mp4">
   </video>
 
   <em style="position:absolute; bottom: 10px; left: 5px" >Click to {paused ? "play" : "pause"}</em>
