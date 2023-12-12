@@ -5,7 +5,7 @@
 
 
 nav {
-    margin: 2rem 0.25rem 0rem 0.25rem;
+    padding-top: 1rem;
     font-weight: bold;
     a {
         display: inline-block;
@@ -22,6 +22,7 @@ nav {
 
 body {
     margin: 0 auto;
+    padding: 1rem;
     max-width: 80ch;
     min-width: 320px;
 }
@@ -29,7 +30,6 @@ body {
 
 
 main {
-    padding: 0.25rem;
     li {
         margin: 1rem 0;
         line-height: 1.5rem;
