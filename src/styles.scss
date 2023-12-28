@@ -1,8 +1,30 @@
 :root {
     color-scheme: light dark;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+
+
+    
 }
+
+a {
+    color: #aa00c0;
+    text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: #2c2a2a;
+    }
+
+    a {
+        color: #ff8b3e
+    }
+}
+
+
+
 
 
 nav {
@@ -11,12 +33,10 @@ nav {
 
     a {
         display: inline-block;
-        color: inherit;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     a:hover {
-        color: rgb(80, 80, 80);
         text-decoration: none;
     }
 }
@@ -45,18 +65,18 @@ p {
     line-height: 1.3rem;
 }
 
-
-a {
+hr {
     color: inherit;
 }
 
+
 h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 15px 0;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 15px 0;
 }
 

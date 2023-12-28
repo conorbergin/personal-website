@@ -1,15 +1,14 @@
 
-<title>Conor Bergin's Website</title>
+<title>Conor Bergin's Blog</title>
 
+### [Compliant Keyboard Switches](/keyswitches)
 
-[Compliant Keyboard Switches Pt 1](/keyswitches)
+### [Building a Text Editor with contenteditable](/contenteditable)
 
-[Building a contenteditable Text Editor from Scratch](/contenteditable)
+### [From Eleventy to SvelteKit](eleventy_to_sveltekit)
 
-[From Eleventy to SvelteKit](eleventy_to_sveltekit)
+### [Advent of Code 2023 in Rust](/aoc_2022_rust)
 
-[Advent of Code 2023 in Rust](/aoc_2022_rust)
+### [On Cad](/on_cad)
 
-[On Cad](/on_cad)
-
-[Making a Flexible Strandbeest](/strandbeest)
+### [Making a Compliant Strandbeest](/strandbeest)

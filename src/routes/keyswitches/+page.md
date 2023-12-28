@@ -1,6 +1,8 @@
-<title>Compliant Keyboard Switches Pt 1</title>
+<title>Compliant Keyboard Switches</title>
 
-_25 Sep_
+# Compliant Keyboard Switches
+
+_25 Sep 2023_
 
 I am generally interested in input devices for computers. Earlier this year I made (assembled) an ortholinear 36 key split keyboard, a relatively common setup. Building it was expensive, it required two controllers (RP2040s), two mainboards, 36 switches, keycaps and hotswap sockets (you could omit the hotswap sockets if you know you won't want to try different switches), which all came to about £120.
 

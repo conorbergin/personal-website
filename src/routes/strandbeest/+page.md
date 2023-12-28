@@ -1,4 +1,6 @@
-<title>Making a Flexible Strandbeest"</title>
+<title>Making a Compliant Strandbeest"</title>
+
+# Making a Compliant Strandbeest
 
 <script>
 
@@ -33,14 +35,7 @@ The difficuly arises because flexures are designed to flex much further than typ
 
 Fortunately, you can make a pretty good approximation of a flexure with linear springs and links, called the Pseudo-Rigid-Body Model (PRBM). They are explained in Chapter 5 of <em>Compliant Mechanisms</em>. The most obvious PRBM is to model a small flexure as a hinge with a torsional spring that returns it to its original position.
 
-<figure style="padding:0px 100px ">
-  <img  src="/strandbeest/prbm-examples.webp" />
-  <figcaption>Fig. 1</figcaption>
-</figure>
-
-In Fig. 1 we see three simple flexures operating in tandem with their PRBM equivalent. A has a very short flexure, so the PRBM is accurate through a large range of motion, B and C have much longer flexures, so the PRBMs are only accurate through a range of about 90 degrees. The value of a, used to determine the position of the pivot in B and C, is an empirically derived number.
-
-## Using FreeCAD to Design Linkages
+## Using FreeCAD to design linkages
 I tried several different rigid body solvers, but found them clumsy to use. You would have to define your model using code, or import it from some CAD package. I wanted something I could work on in realtime. I started using FreeCAD to sketch out ideas, using the contraint solver in the Sketcher workbench as a poor man’s rigid body solver. I found that FreeCAD worked fine for my use case (I wasn’t worryed about kinematics or dynamics at this point, I was looking for a mapping between crank angles and end effector position). FreeCAD has a python interface, so I wrote a script that would periodically change the angle of the input link.
 
 <figure>

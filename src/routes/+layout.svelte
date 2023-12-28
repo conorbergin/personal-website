@@ -14,16 +14,15 @@
 </script>
 
 <nav>
-  {#if $page.url.pathname === "/"}
-    home
-  {:else}
-    <a href="/">home</a> /
-    {#each split($page.url.pathname) as link}
-      <a href={link.path}>{link.name}</a>
-    {/each}
-    {$page.url.pathname.split("/").at(-1)}
-  {/if}
+  
+  <a href='/'>Home</a> /
+  <a href='/about'>About</a> /
+  <a href='https://github.com/conorbergin'>GitHub</a>
+
+
+  
 </nav>
+<hr style="border: 1px solid inherit">
 <main>
   <slot />
 </main>
