@@ -22,7 +22,6 @@
 
   
 </nav>
-<hr style="border: 1px solid inherit">
 <main>
   <slot />
 </main>
