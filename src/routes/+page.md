@@ -1,14 +1,14 @@
 
+
 <title>Conor Bergin's Blog</title>
 
-### [Compliant Keyboard Switches](/keyswitches)
+I'm a mechanical engineer grad and open source developer. If you want to contact me you can use myname at protonmail.com. If you run into a problem with this website please [open an issue](https://github.com/conorbergin/personal-website).
 
-### [Building a Text Editor with contenteditable](/contenteditable)
+## Recent Posts
 
-### [From Eleventy to SvelteKit](eleventy_to_sveltekit)
+25/09/2023 - [Are compliant keyboard switches viable?](/keyswitches)  
+19/09/2023 - [How I built a text editor with contenteditable](/contenteditable)  
+19/09/2023 - [From Eleventy to SvelteKit](/eleventy_to_sveltekit)  
+08/03/2023 - [Advent of Code 2023 with Rust](/aoc_2022_rust)  
 
-### [Advent of Code 2023 in Rust](/aoc_2022_rust)
 
-### [On Cad](/on_cad)
-
-### [Making a Compliant Strandbeest](/strandbeest)

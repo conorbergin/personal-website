@@ -1,15 +1,14 @@
 :root {
     color-scheme: light dark;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-
-    
 }
 
 a {
     color: #2467c0;
-    text-decoration: none;
+    // text-decoration: none;
+    // background-color: #eeeeee;
+
+
 }
 
 
@@ -19,7 +18,7 @@ a {
     }
 
     a {
-        color: #ff7b00
+        color: #ff7b00;
     }
 }
 
@@ -28,10 +27,7 @@ a {
 
 
 nav {
-    padding-bottom: 0.2rem;
-    border-bottom: 1px solid;
 
-    padding-top: 0rem;
     font-weight: bold;
 
     a {
@@ -40,7 +36,7 @@ nav {
     }
 
     a:hover {
-        text-decoration: none;
+        // text-decoration: none;
     }
 }
 

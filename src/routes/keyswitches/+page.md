@@ -1,6 +1,6 @@
 <title>Compliant Keyboard Switches</title>
 
-# Compliant Keyboard Switches
+# Are compliant keyboard switches viable?
 
 _25 Sep 2023_
 

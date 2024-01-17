@@ -1,8 +1,8 @@
 
 
-<title>Advent of Code 2022 in Rust</title>
+<title>Advent of Code 2022 with Rust</title>
 
-# Advent of Code 2022 in Rust
+# Advent of Code 2022 with Rust
 
 _08 Mar 2022_
 

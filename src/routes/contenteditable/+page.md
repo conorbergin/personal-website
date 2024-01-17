@@ -1,7 +1,7 @@
 
 <title>Building a Text Editor with contenteditable</title>
 
-# Building a Text Editor with contenteditable
+# How I built a text editor with contenteditable
 
 _19 Sep 2023_
 
