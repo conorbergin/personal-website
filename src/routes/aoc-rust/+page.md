@@ -1,1 +1,1 @@
-_[moved](aoc_2022_rust)_
+_[moved](posts/aoc_2022_rust)_

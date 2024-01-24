@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 
 
-export const load = async ({params}) => {
+export const load = async ({params,url}) => {
     try {
         const post = await import(`../../../posts/${params.slug}.md`)
         return {
