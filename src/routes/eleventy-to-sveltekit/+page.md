@@ -1,1 +1,1 @@
-_[moved](/eleventy_to_sveltekit)_
+_[moved](/posts/eleventy_to_sveltekit)_

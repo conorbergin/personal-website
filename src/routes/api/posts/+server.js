@@ -22,7 +22,7 @@ const fetchMarkdownPosts = async () => {
 
 
 export const GET = async ({url}) => {
-    const urlTags = url.searchParams.get('tags')?.split(',')
+    // const urlTags = url.searchParams.get('tags')?.split(',')
 	const allPosts = await fetchMarkdownPosts();
 
 	const sortedPosts = allPosts.sort((a, b) => {
@@ -30,15 +30,15 @@ export const GET = async ({url}) => {
 	});
 
 
-    // Filter posts based on tags if tags are present
-    const filteredPosts = urlTags
-        ? sortedPosts.filter(post => {
-            // Assuming tags are found under post.meta.categories
-            const postTags = post.meta.tags || [];
-            return urlTags.every(t => postTags.includes(t));
-        })
-        : sortedPosts;
+    // // Filter posts based on tags if tags are present
+    // const filteredPosts = urlTags
+    //     ? sortedPosts.filter(post => {
+    //         // Assuming tags are found under post.meta.categories
+    //         const postTags = post.meta.tags || [];
+    //         return urlTags.every(t => postTags.includes(t));
+    //     })
+    //     : sortedPosts;
 
 
-	return json(filteredPosts);
+	return json(sortedPosts);
 };
