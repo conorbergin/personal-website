@@ -1,9 +1,9 @@
-
-<title>From Eleventy to SvelteKit</title>
-
-# From Eleventy to SvelteKit
-
-_19 Sep 2023_
+---
+title: From Eleventy to SvelteKit
+date: "2023-09-19"
+tags:
+  - webdev
+---
 
 I started this website in the final year of my engineering degree. Up to this point my "areas of inquiry" had been esoteric operating systems and scientific computing, so I assumed web dev would be plain sailing.
 

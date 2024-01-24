@@ -1,1 +1,1 @@
-_[moved](/on_cad)_
+_[moved](/posts/on_cad)_

@@ -1,2 +1,0 @@
-# Naming things is hard
-
