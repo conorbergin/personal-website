@@ -5,7 +5,7 @@ tags:
   - webdev
 ---
 
-Around March this year I decided I was going to build a note-taking app, having never been quite satisfied with what was on offer. I spent about six months on the project before shelving it. It was my first serious attempt to build a user facing service and I decided what I had achieved wasn't quite as revoltionary as I though it was when I was building it, maybe I will come back to it in the future.
+Around March this year I decided I was going to build a note-taking app, having never been quite satisfied with what was on offer. I spent about six months on the project before shelving it. It was my first serious attempt to build a user facing service and I decided what I had achieved wasn't quite as revolutionary as I though it was when I was building it, maybe I will come back to it in the future.
 
 ## Prosemirror
 If you ask online how to create a rich text editor you will be directed to Prosemirror or one of its derivatives. These work great out of the box, and collaboration is very easy to set up with Yjs. However, customizing Prosemirror is hard, so hard that I started writing my own contenteditable editor from scratch. In particular I wanted:
@@ -44,7 +44,7 @@ root_element.onbeforeinput = (event) => {
 ```
 
 ## Selection
-One of the tricker parts of this project was finding where the text cursor, or caret, is. There wasn't any nice beforeinput feature for this, I had to read the slection from the DOM, and convert that to a Yjs document position. This is one of the messiest parts of my project, and `selection.ts` still contains large piece of code pulled as-is from stack overflow.
+One of the tricker parts of this project was finding where the text cursor, or caret, is. There wasn't any nice beforeinput feature for this, I had to read the selection from the DOM, and convert that to a Yjs document position. This is one of the messiest parts of my project, and `selection.ts` still contains large piece of code pulled as-is from stack overflow.
 
 ## Rendering
 Up until this point I was rolling my own javascript renderer, which was a real pile of junk that redrew the entire page every time the state changed. I was faced with writing a proper renderer or submitting to a UI library. I settled on Solid after also trying Svelte and React, Svelte is a bit too magical and React is too old and well supported for my taste. Using Solid was a big boost to my productivity, it never made it difficult to drop down to the underlying web apis, which I did a lot, and being able to declare my components in JSX, rather than abusing `Object.assign()` really cleaned up my code. I am still not sure if Solid was a better choice than React or Svelte, there were a few third party libraries in each I would have liked to have, in particular SyncedStore.

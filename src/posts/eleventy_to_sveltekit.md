@@ -11,7 +11,7 @@ I started this website in the final year of my engineering degree. Up to this po
 
 Slightly overwhelmed by all the paths I could take, I settled on static site generators. I looked at Eleventy and Hugo, going with Eleventy because it seemed more flexible. I would recommend starting with just HTML and CSS for someone in a similar position, it's much easier to understand the templating and data fetching a static site generator does if you understand what you are actually generating.
 
-I was satisfied with Eleventy for some time, it had a few very useful features, such as being able to generate a date from the last edit of that file in the git repo. I could host it on Netlify and have it linked to my Github so that it rebuilt everytime I pushed an update.
+I was satisfied with Eleventy for some time, it had a few very useful features, such as being able to generate a date from the last edit of that file in the git repo. I could host it on Netlify and have it linked to my Github so that it rebuilt every time I pushed an update.
 
 ## A digression on GUI toolkits
 
@@ -28,5 +28,5 @@ Choosing a webapp also opens up a world of excellent third party libraries, many
 
 ## SvelteKit
 
-After using Svelte for a month or so I realised there was nothing stopping me from using it for my website as well. It would be no heavier, because of its compile step, and it would offer me a lot more flexibility. Actually the main reason I started using it was so the page wouldn't completely redraw when you were navigating the website. Once I installed a markdown preprocessor (mdsvex) I couldn't see any advantage in going back to Eleventy.
+After using Svelte for a month or so I realized there was nothing stopping me from using it for my website as well. It would be no heavier, because of its compile step, and it would offer me a lot more flexibility. Actually the main reason I started using it was so the page wouldn't completely redraw when you were navigating the website. Once I installed a markdown preprocessor (mdsvex) I couldn't see any advantage in going back to Eleventy.
 
