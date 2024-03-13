@@ -28,8 +28,8 @@
 
 <h1>{title}</h1>
 
-<div class="meta">
-	<em>{date}</em>
+<div class="gray">
+	<em>Conor Bergin - {date}</em>
 </div>
 
 <svelte:component this={PostContent} />

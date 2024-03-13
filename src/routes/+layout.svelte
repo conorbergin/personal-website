@@ -1,19 +1,36 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import "../styles.scss";
-  import "../prisma.css"
-
+  import "../prisma.css";
 </script>
 
 <nav>
-  
-  <a href='/'>Home</a> /
-  <a href="/posts">Posts</a> /
-  <a href='https://github.com/conorbergin'>GitHub</a>
-  
+  <a class={$page.url.pathname == "/" ? "accent" : ""} href="/">home</a> /
+  <a
+    class={$page.url.pathname == "/posts" || $page.url.pathname == "/posts/"
+      ? "accent"
+      : ""}
+    href="/posts/">posts</a
+  >
+  /
+  <a
+    class={$page.url.pathname == "/about" || $page.url.pathname == "/about/"
+      ? "accent"
+      : ""}
+    href="/about/">about</a
+  >
+  /
+  <a href="https://github.com/conorbergin">github</a>
 </nav>
+<hr class="gray" />
+
 <main>
   <slot />
 </main>
 
-<footer />
+<footer>
+  <hr />
+  copyright 2022-2024 Conor Bergin |<a
+    href="https://github.com/conorbergin/personal-website/">source</a
+  >
+</footer>

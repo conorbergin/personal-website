@@ -2,17 +2,17 @@
 	export let data;
 </script>
 
+<title>Posts</title>
+
+
+<h1>Posts</h1>
+
 <p>
 	{#each data.posts as post}
-		{post.meta.date} -
+		<span class="gray">{post.meta.date} - </span>
 		<a href={post.path}>
 			{post.meta.title}
 		</a>
-		{#if post.meta.tags}
-			{#each post.meta.tags as tag}
-				<span class="tag">#{tag}</span>
-			{/each}
-		{/if}
 		<br />
 	{/each}
 </p>
