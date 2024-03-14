@@ -1,18 +1,14 @@
-<script>
-	export let data;
-</script>
+<script lang="ts">
+	import type { PageData } from './$types';
 
-<title>Posts</title>
+	export let data : PageData;
+</script>
 
 
 <h1>Posts</h1>
 
-<p>
-	{#each data.posts as post}
-		<span class="gray">{post.meta.date} - </span>
-		<a href={post.path}>
-			{post.meta.title}
-		</a>
-		<br />
-	{/each}
-</p>
+{#each data.posts as post}
+	<a href={"/posts/" + post.slug}><span class="gray">{post.date} - </span>{post.title}</a>
+	<br/>
+{/each}
+<br/>

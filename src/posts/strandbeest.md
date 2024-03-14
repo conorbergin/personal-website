@@ -1,8 +1,7 @@
 ---
+published: true
 title: Making a Compliant Strandbeest
 date: "2022-09-22"
-tags:
-  - compliant mechanisms
 ---
 
 <script>

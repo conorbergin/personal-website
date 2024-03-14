@@ -1,8 +1,7 @@
 ---
+published: true
 title: Advent of Code 2022 with Rust
 date: "2023-03-08"
-tags:
-  - Rust
 ---
 
 

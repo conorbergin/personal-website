@@ -1,5 +1,13 @@
-<script>
-	export let data;
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	import PageHead from '$lib/components/PageHead.svelte';
+	import Article from '$lib/components/Article.svelte';
+	import ArticleTitle from '$lib/components/ArticleTitle.svelte';
+	import ArticleMeta from '$lib/components/ArticleMeta.svelte';
+	import ArticleDescription from '$lib/components/ArticleDescription.svelte';
+
+	export let data: PageData;
 </script>
 
 <title>Conor Bergin's Blog</title>
@@ -8,12 +16,9 @@
 
 ## Recent Posts
 
-{#each data.posts.slice(0, 4) as post}
-	<span class="gray">{post.meta.date} - </span>
-	<a href={post.path}>
-		{post.meta.title}
-	</a>
-	<br />
+{#each data.posts as post}
+	<a href={"posts/" + post.slug}><span class="gray">{post.date} - </span>{post.title}</a>
+	<br/>
 {/each}
 
 ## Projects

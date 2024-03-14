@@ -1,8 +1,7 @@
 ---
+published: true
 title: Are compliant keyboard switches viable?
 date: "2023-09-25"
-tags:
-  - compliant mechanisms
 
 ---
 

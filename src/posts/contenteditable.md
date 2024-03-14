@@ -1,8 +1,7 @@
 ---
+published: true
 title : How I built a text editor with contenteditable
 date: "2023-09-19"
-tags:
-  - webdev
 ---
 
 Around March this year I decided I was going to build a note-taking app, having never been quite satisfied with what was on offer. I spent about six months on the project before shelving it. It was my first serious attempt to build a user facing service and I decided what I had achieved wasn't quite as revolutionary as I though it was when I was building it, maybe I will come back to it in the future.

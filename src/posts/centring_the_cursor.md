@@ -1,8 +1,7 @@
 ---
+published: true
 title: Centring the Cursor
 date: "2024-03-11"
-tags:
-    - UI
 ---
 
 I was watching a demonstration of Apple's new VR headset today and I noticed they were using a translucent grey dot as a cursor, the same as they use on the iPad when you attach an external trackpad. Will macOS eventually have a cursor like this?
