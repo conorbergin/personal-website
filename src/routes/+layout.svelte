@@ -30,12 +30,6 @@
 <!-- <hr class="gray" /> -->
 
 <main style="position:relative;">
-  <div style="position:absolute; right:50px; top:-10px">
-    <Eye />
-  </div>
-  <div style="position:absolute; right:110px; top:-10px">
-    <Eye />
-  </div>
   <slot />
 </main>
 
