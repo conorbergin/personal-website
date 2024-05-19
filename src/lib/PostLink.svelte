@@ -6,7 +6,7 @@
 </script>
 
 <div>
-    <a href={"posts/" + post.slug}>{post.title}</a>
+    <a href={"/posts/" + post.slug}>{post.title}</a>
     
     <span class="gray">{post.date}</span>
 </div>
